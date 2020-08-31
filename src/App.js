@@ -17,25 +17,24 @@ const Repos = ({ login, number_of_repos }) => {
       number_of_repos: count
     }
   })
-  return <Filter placeholder="Repository Name"></Filter>
-  // if (login === '') return <></>
-  // if (loading) return <Loading></Loading>
-  // if (error) {
-  //   return <ErrorMessage login={login}></ErrorMessage>
-  // }
-  // if (number_of_repos)
-  //   return (
-  //     <Filter
-  //       items={data.user.repositories.nodes}
-  //       placeholder="Repository Name"
-  //     ></Filter>
-  //   )
-  // return (
-  //   <Repos
-  //     login={login}
-  //     number_of_repos={data.user.repositories.totalCount}
-  //   ></Repos>
-  // )
+  if (login === '') return <></>
+  if (loading) return <Loading></Loading>
+  if (error) {
+    return <ErrorMessage login={login}></ErrorMessage>
+  }
+  if (number_of_repos)
+    return (
+      <Filter
+        items={data.user.repositories.nodes}
+        placeholder="Repository Name"
+      ></Filter>
+    )
+  return (
+    <Repos
+      login={login}
+      number_of_repos={data.user.repositories.totalCount}
+    ></Repos>
+  )
 }
 
 function App() {
