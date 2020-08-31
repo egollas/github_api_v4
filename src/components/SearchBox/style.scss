@@ -1,5 +1,23 @@
+.searchbox {
+  display: flex;
+  flex-direction: row;
+}
 .input {
   width: 330px;
   height: 40px;
-  font-size: 16px;
+  font-size: 20px;
+  padding-left: 10px;
+  background-color: #232135;
+  border-color: #aeaee0;
+  color: #aeaee0;
+  margin-right: 50px;
+}
+.button {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: #232135;
+  border-radius: 10px;
+  border: solid 1px;
+  border-color: #aeaee0;
+  color: #aeaee0;
 }

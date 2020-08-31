@@ -15,7 +15,7 @@ export const SearchBox = ({ onClick }) => {
     onClick(searchTerm)
   }
   return (
-    <div>
+    <div className="searchbox">
       <input
         type="text"
         placeholder="Enter the Github Username"
@@ -23,7 +23,9 @@ export const SearchBox = ({ onClick }) => {
         onChange={(e) => handleChange(e)}
         onKeyDown={handleEnter}
       ></input>
-      <button onClick={() => handleClick()}>Search</button>
+      <button className="button" onClick={() => handleClick()}>
+        Search
+      </button>
     </div>
   )
 }
