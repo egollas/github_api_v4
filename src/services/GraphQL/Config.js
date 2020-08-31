@@ -5,7 +5,7 @@ export const createApolloClient = () => {
     link: new HttpLink({
       uri: 'https://api.github.com/graphql',
       headers: {
-        Authorization: 'Bearer c088f6f0aea76bb0ef9a87def1efdd6b4cc07271'
+        Authorization: 'Bearer c3744595bcb14d1131837ffd40f5ebe979b885e9'
       }
     }),
     cache: new InMemoryCache()
